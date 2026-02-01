@@ -4,7 +4,7 @@ import os
 
 # CONFIG
 if not os.environ.get("GOOGLE_API_KEY"):
-    os.environ["GOOGLE_API_KEY"] = "AIzaSyDnkGMwboGeNLkQ-GgbYRnq0B00FVJI1Ig"
+    os.environ["GOOGLE_API_KEY"] = "Not an API Key"
 
 # IMPORTS
 from agent import app   
