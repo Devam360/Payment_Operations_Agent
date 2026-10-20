@@ -4,3 +4,4 @@ langchain-google-genai
 pydantic
 colorama
 google-generativeai
+python-dotenv

@@ -3,7 +3,7 @@
 > **A self-healing payment infrastructure that Observes, Reasons, and Acts in real-time.**
 
 ## Overview
-Traditional payment operations rely on static dashboards and reactive humans. By the time an alert triggers, revenue is already lost. 
+Traditional payment operations rely on static dashboards and reactive humans. By the time an alert triggers, revenue is already lost.
 
 This project implements an Agentic AI that acts as an autonomous Reliability Engineer. It ingests streaming payment data, detects complex failure patterns (like issuer outages), and proactively reroutes traffic to healthy gateways—all without human intervention.
 
@@ -25,3 +25,15 @@ The system is built on a modular Python architecture:
 | **The Conductor** | `main.py` | Orchestrates the loop and injects failure scenarios for demonstration. |
 
 
+
+## Setup
+
+```bash
+git clone https://github.com/Devam360/Payment_Operations_Agent.git
+cd Payment_Operations_Agent
+pip install -r requirements.txt
+cp .env.example .env   # then put your Google API key in .env
+python main.py
+```
+
+The Google Gemini API key is read from the `GOOGLE_API_KEY` environment variable, loaded from `.env` via `python-dotenv`. `.env` is git-ignored, so keep your real key there and never commit it.

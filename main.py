@@ -2,9 +2,12 @@ import time
 from colorama import Fore, Style, init
 import os
 
-# CONFIG
+from dotenv import load_dotenv
+
+# CONFIG: load GOOGLE_API_KEY from a local .env file (see .env.example)
+load_dotenv()
 if not os.environ.get("GOOGLE_API_KEY"):
-    os.environ["GOOGLE_API_KEY"] = "Not an API Key"
+    raise SystemExit("GOOGLE_API_KEY is not set. Copy .env.example to .env and add your key.")
 
 # IMPORTS
 from agent import app   
